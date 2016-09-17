@@ -14,8 +14,8 @@
 return [
     'service_manager' => [
         'factories' => [
-            Application\Factory\Db\Adapter\Adapter::class => Application\Factory\Db\Adapter\Adapter::class,
-            Application\Model\Beer\TableGateway::class =>  Application\Factory\Model\Beer\TableGateway::class,
+            Application\Model\BeerTableGateway::class =>  Application\Factory\BeerTableGateway::class,
+            Application\Factory\DbAdapter::class => Application\Factory\DbAdapter::class,
         ],
     ],
     'db' => [
