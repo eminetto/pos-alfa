@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a7adbb189e0c39bfd52cd01dac44b823",
-    "content-hash": "0bd4305833c738106a9ac090ff782c62",
+    "hash": "6983910507b26862b15f38ccb79096e6",
+    "content-hash": "f2207f5e9556732ed731aaa972bea825",
     "packages": [
         {
             "name": "bjyoungblood/bjy-profiler",
