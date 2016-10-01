@@ -55,7 +55,8 @@ return [
             Controller\IndexController::class => InvokableFactory::class,
             Controller\BeerController::class => function($container, $requestedName) {
                 $tableGateway = $container->get('Application\Model\BeerTableGateway');
-                $controller = new Controller\BeerController($tableGateway);
+                $cache = $container->get('Application\Service\Cache');
+                $controller = new Controller\BeerController($tableGateway, $cache);
 
                 return $controller;
             },

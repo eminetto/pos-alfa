@@ -16,11 +16,23 @@ return [
         'factories' => [
             Application\Model\BeerTableGateway::class =>  Application\Factory\BeerTableGateway::class,
             Application\Factory\DbAdapter::class => Application\Factory\DbAdapter::class,
+            Application\Service\Auth::class => Application\Factory\ServiceAuth::class,
+            'Application\Service\Cache' => Application\Factory\ServiceCache::class,
         ],
     ],
     'db' => [
         'driver' => 'Pdo_Sqlite',
         'database' => 'data/beers.db',
+    ],
+    'cache' => [
+        'adapter' => [
+            'name'    => 'apc',
+            'options' => ['ttl' => 3600],
+        ],
+        'plugins' => [
+            'exception_handler' => ['throw_exceptions' => false],
+            'serializer',
+        ],
     ],
 ];
 
