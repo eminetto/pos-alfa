@@ -20,6 +20,22 @@ class BeerController extends AbstractActionController
         return new ViewModel(['beers' => $beers]);
     }
 
+    public function createAction()
+    {
+        $form = new \Application\Form\Beer;
+        foreach ($form->getElements() as $element) {
+            if (! $element instanceof \Zend\Form\Element\Submit) {
+                $element->setAttributes([
+                    'class' => 'form-control'
+                ]);
+            }
+        }
+        $view = new ViewModel(['form' => $form]);
+        $view->setTemplate('application/beer/save.phtml');
+
+        return $view;
+    }
+
     public function deleteAction()
     {
         $id = (int) $this->params()->fromRoute('id');
