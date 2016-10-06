@@ -5,7 +5,7 @@ namespace Application\Form;
 use Zend\Form\Element;
 use Zend\Form\Form;
 
-class Beer extends Form
+class Login extends Form
 {
     public function __construct()
     {

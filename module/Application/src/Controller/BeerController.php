@@ -29,7 +29,7 @@ class BeerController extends AbstractActionController
 
     private function getForm()
     {
-        $form = new \Application\Form\Beer;
+        $form = new \Application\Form\Login;
         foreach ($form->getElements() as $element) {
             if (! $element instanceof \Zend\Form\Element\Submit) {
                 $element->setAttributes([
