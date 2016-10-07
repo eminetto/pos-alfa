@@ -9,16 +9,10 @@ class Login extends Form {
 
     public function __construct() {
         parent::__construct();
-
         $this->add([
             'name' => 'usuario',
-            'options' => [
-                'label' => 'Usuário',
-            ],
             'attributes' => [
-                'class' => 'form-control',
-                'placeholder' => 'usuário',
-                'required'=> 'required'
+                'required' => true
             ],
             'filters' => [
                 ['name' => 'StripTags'],
@@ -29,15 +23,10 @@ class Login extends Form {
 
         $this->add([
             'name' => 'senha',
-            'options' => [
-                'label' => 'Senha',
-            ],
-            'attributes' => [
-                'class' => 'form-control',
-                'placeholder' => 'senha',
-                'required'=> 'required'
-            ],
             'type' => 'Password',
+            'attributes' => [
+                'required' => true
+            ],
             'filters' => [
                 ['name' => 'StripTags'],
                 ['name' => 'StringTrim'],
